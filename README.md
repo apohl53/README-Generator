@@ -29,6 +29,8 @@ This project is licensed under MIT
 
 Users should read the installation section and make sure they have the necessary files.
 
+./assets/README 1.mp4
+
 ## Tests
 
 node index.js
