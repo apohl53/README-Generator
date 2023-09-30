@@ -18,6 +18,7 @@
 
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 // TODO: Create an array of questions for user input
@@ -144,6 +145,17 @@ const questions = () => {
 //Email address
 
 // TODO: Create a function to write README file
+function init() {
+  questions()
+    .then((data) => {
+      const readmeData = generateReadme(data); // Replace with your own function to generate the README content
+      writeToFile("README.md", readmeData);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
@@ -155,8 +167,15 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init(questions) {
-  writeToFile("README.md", data);
+function init() {
+  questions()
+    .then((data) => {
+      const readmeData = generateMarkdown(data);
+      writeToFile("README.md", readmeData);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
 // Function call to initialize app
