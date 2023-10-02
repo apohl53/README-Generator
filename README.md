@@ -21,6 +21,8 @@ The user should clone this repo from Github and download Node. This application 
 
 Use inquirer from the command line to answer the questions about your project.
 
+https://github.com/apohl53/README-Generator/assets/117484338/9dcc154d-03c0-4dd0-ac0e-a7abc3421e7a
+
 ## License
 
 This project is licensed under MIT
@@ -28,8 +30,6 @@ This project is licensed under MIT
 ## Contributing
 
 Users should read the installation section and make sure they have the necessary files.
-
-./assets/README 1.mp4
 
 ## Tests
 
